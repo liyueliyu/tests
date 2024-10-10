@@ -6,9 +6,12 @@
         <img src="https://p.ipic.vip/ru3q1d.png" alt="" />
         <img src="https://p.ipic.vip/0vts2p.png" alt="" />
         <img src="https://p.ipic.vip/fzd36k.png" alt="" />
-        <!-- <img src="/public/images/app9KTBmXHMK2mtI9RHyzPDs-h0NXne1.png" alt="" >
-        <img src="/public/images/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" alt="" >
-        <img src="/public//images/appzx4bpYR9rpFdZULrF9EFycs2l-416.png" alt=""> -->
+        <!-- <img src="/public/images/app9KTBmXHMK2mtI9RHyzPDs-h0NXne1.png" alt="" />
+        <img src="/public/images/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" alt="" />
+        <img
+          src="/public//images/appzx4bpYR9rpFdZULrF9EFycs2l-416.png"
+          alt=""
+        /> -->
       </Carousel>
     </div>
 
@@ -56,7 +59,7 @@ import { Button, Carousel, Space, Radio, App } from "ant-design-vue";
 import to from "await-to-js";
 import { useRouter } from "vue-router";
 import { getAccessToken } from "@/service/api";
-const router = useRouter()
+const router = useRouter();
 const { notification } = App.useApp();
 const userLoginInfo = ref({
   username: "1765176356@qq.com",
@@ -75,6 +78,6 @@ const loginHandle = async () => {
   const [err, res] = await to(getAccessToken(loginData));
   console.log(err, res);
   if (!err) notification.success({ message: "恭喜你，登陆成功！" });
-  router.replace("home")
+  router.replace("home");
 };
 </script>
